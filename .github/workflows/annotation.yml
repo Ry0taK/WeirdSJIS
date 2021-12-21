@@ -1,0 +1,13 @@
+name: Add annotation
+
+on:
+  push:
+  pull_request:
+  
+jobs:
+  annotation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set annotation
+        run: |
+          echo "::warning file=repro.c,line=1,col=1,endColumn=1::message]"
